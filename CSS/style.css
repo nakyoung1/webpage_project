@@ -28,7 +28,8 @@ header {
      display: flex;
      flex-direction: column;
      gap: 20px;
-     padding: 30px;
+     padding-left: 5%;
+     margin-bottom: 20px;
 }
 .title h3 {
      font-size: 40px;
@@ -51,20 +52,20 @@ header {
      margin-bottom: 20px;
 }
 /*위치 안내 부분*/
-.map {
-     padding: 30px;
-}
+
 .map h4 {
-     margin-bottom: 30px;
+     padding-left: 5%;
+     margin: 40px 0;
 }
 .map .link {
      border: 1px solid black;
      border-radius: 10px;
      padding: 20px 0;
-
      display: flex;
      flex-direction: column;
      gap: 15px;
+     width: 90%;
+     margin: 0 auto;
 }
 .map .link li {
      display: flex;
@@ -117,13 +118,14 @@ header {
 .cardnews {
      display: flex;
      flex-direction: column;
-     padding: 30px;
+     margin-top: 30px;
 }
 .cardnews p span {
      color: red;
      font-weight: bold;
 }
 .cardnews p {
+     padding-left: 5%;
      margin-bottom: 30px;
 }
 #cardnews_image li {

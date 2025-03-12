@@ -1,0 +1,137 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+ul {
+     list-style: none;
+}
+a {
+     text-decoration: none;
+     color: black;
+}
+
+/*헤더 부분*/
+header {
+     height: 4.5rem;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0 20px;
+     border-bottom: 1px solid rgba(100, 100, 100, 0.2);
+}
+
+/*메인 부분*/
+/*메인 컨텐츠 부분*/
+.title {
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     padding: 30px;
+}
+.title h3 {
+     font-size: 40px;
+}
+.title p {
+     width: 90%;
+     font-size: 16px;
+}
+
+#fullpage section .main-page li a {
+     height: 5rem;
+     width: 90%;
+     margin: 0 auto;
+     border: 1px solid black;
+     border-radius: 10px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0 20px;
+     margin-bottom: 20px;
+}
+/*위치 안내 부분*/
+.map {
+     padding: 30px;
+}
+.map h4 {
+     margin-bottom: 30px;
+}
+.map .link {
+     border: 1px solid black;
+     border-radius: 10px;
+     padding: 20px 0;
+
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+}
+.map .link li {
+     display: flex;
+     justify-content: space-between;
+     padding: 0 20px;
+}
+
+/*카드뉴스*/
+.slider {
+     overflow: hidden;
+}
+.slick-dots {
+     position: absolute;
+     bottom: -30px; /* 점을 슬라이드 아래에 위치 */
+     left: 50%;
+     transform: translateX(-50%); /* 가로로 중앙 정렬 */
+     padding: 0;
+     margin: 0;
+     list-style-type: none;
+}
+
+.slick-dots li {
+     display: inline-block; /* 점을 가로로 정렬 */
+     margin: 0 10px; /* 점 사이의 간격 */
+}
+
+.slick-dots li button {
+     background-color: #000000;
+     border: 2px solid #ccc;
+     border-radius: 50%; /* 동그라미 모양 */
+     width: 12px;
+     height: 12px;
+     padding: 0;
+     cursor: pointer;
+     outline: none;
+     transition: background-color 0.3s;
+}
+
+/* 버튼에 호버 시 색상 변경 */
+.slick-dots li button:hover {
+     background-color: #ff4c4c;
+}
+
+/* 선택된 버튼 스타일 */
+.slick-dots li.slick-active button {
+     background-color: #333;
+     border-color: #333;
+}
+
+.cardnews {
+     display: flex;
+     flex-direction: column;
+     padding: 30px;
+}
+.cardnews p span {
+     color: red;
+     font-weight: bold;
+}
+.cardnews p {
+     margin-bottom: 30px;
+}
+#cardnews_image li {
+     margin: 0 10px;
+     position: relative;
+}
+#cardnews_image li img {
+     border-radius: 10px;
+     width: 100%;
+     object-fit: cover;
+}

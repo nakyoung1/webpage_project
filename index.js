@@ -1,21 +1,20 @@
-// $(document).ready(function () {
-//      $(".bxslider").bxSlider({
-//           minSlides: 2, // 최소 2개 보이게
-//           maxSlides: 4, // 최대 4개 보이게
-//           slideWidth: 500, // 각 슬라이드 너비 설정 (반응형으로 적용됨)
-//           slideMargin: 30,
-//           moveSlides: 1, // 한 번에 한 장씩 이동
-//           auto: true, // 자동 슬라이드 활성화
-//           pause: 2000, // 1초에 한 번씩 넘어감
-//           speed: 2000, // 슬라이드 넘어가는 속도 (2초)
-//           easing: "easeOutQuad",
-//           infiniteLoop: true,
-//           ticker: true,
-//           controls: false, // 이전/다음 버튼 숨기기 (원하는 경우 true로 변경)
-//           pager: false, // 하단 페이지 네비게이션 숨기기 (필요하면 true)
-//           responsive: true,
+// $(function () {
+//      $(".menu-btn").on("click", function (e) {
+//           e.preventDefault();
+//           $(".mobile_menu").slideToggle();
 //      });
 // });
+
+$(function () {
+     //토글 메뉴 플러그인 실행
+     var toggle = $(".toggle");
+     var menu = $(".mobile_menu");
+     $(toggle).on("click", function (e) {
+          e.preventDefault(); // 이벤트 기본동작 실행 막기
+          menu.slideToggle();
+     });
+});
+
 $(document).ready(function () {
      $(".slider").slick({
           slidesToShow: 3, // 기본적으로 4장 표시
@@ -31,7 +30,7 @@ $(document).ready(function () {
           variableWidth: false, // 동일한 크기로 정렬
           responsive: [
                {
-                    breakpoint: 1024, // 태블릿 이하
+                    breakpoint: 1200, // 태블릿 이하
                     settings: {
                          slidesToShow: 3, // 3장 표시
                     },
@@ -40,12 +39,6 @@ $(document).ready(function () {
                     breakpoint: 768, // 모바일 (가로 모드)
                     settings: {
                          slidesToShow: 2, // 2장 표시
-                    },
-               },
-               {
-                    breakpoint: 480, // 작은 모바일 화면
-                    settings: {
-                         slidesToShow: 1, // 1장만 표시
                     },
                },
           ],

@@ -3,7 +3,7 @@
      <head>
           <meta charset="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <title>더술닷컴</title>
+          <title>한술담다</title>
           <link rel="stylesheet" href="./CSS/style.css" />
           <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
           <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -11,53 +11,56 @@
            </head>
      <body>
           <header>
-               <button>menu</button>
-               <p><a href="">logo img</a></p>
-               <div id="utility">
+            <a href="#" class="toggle">
+                <img src="./img/but_toggle.png" />
+           </a>
+         
+           <ul class ="mobile_menu">
+            <li><a href="">전통주 검색하기</a></li>
+            <li><a href="">위치 안내</a></li>
+            <li><a href="">카드 뉴스</a></li>
+           </ul>
+               <p><a href=""><img src = "./img/png_logo.png"/></a></p>
+               <ul class ="pc_menu">
+                <li><a href="">전통주 검색하기</a></li>
+                <li><a href="">위치 안내</a></li>
+                <li><a href="">카드 뉴스</a></li>
+               </ul> 
+               <div class="utility">
                     <a href="">KOR</a>
-                    <button>검색</button>
+                    <a href="">ENG</a>
           </header> 
-
-          <main id="fullpage">
+       
+          <main class="fullpage">
                     <section>
                          <div class="title">
-                              <h3>더술닷컴</h3>
-                              <p>농림축산식품부와 한국농수산식품유통공사가 전통주의 우수성과 가치를 알리기 위해 운영하는 우리술 종합정보사이트입니다.</p>
+                              <h3>한술담다</h3>
+                              <p>한 잔의 술에 전통과 이야기를 담다.</p>
+                                <p>다양한 전통주에 대해 알아보고,
+                                나와 어울리는 전통주를 찾아보세요.</p>
                          </div>
                          <ul class = "main-page">
-                              <li>
+                              <li class = "link">
                                    <a href="">
-                                    <div>
-                                        <p>뉴스클리핑</p>
-                                        <p>서비스신청</p>
-                                    </div>
+                                        <p>전통주란?</p>
                                         <img src="" alt="이미지" />
                                    </a>
                               </li>
-                              <li>
+                              <li class = "link">
                                    <a href="">
-                                    <div>
-                                        <p>문자메시지 신청</p>
-                                        <p>(전통주 정책지원사업 문자 전송)</p>
-                                    </div>
+                                        <p>전통주 검색하기</p>
                                         <img src="" alt="이미지" />
                                    </a>
                               </li>
-                              <li>
+                              <li class = "link">
                                    <a href="">
-                                    <div>
-                                        <p>신상술&프로모션</p>
-                                        <p>홍보 신청하기</p>
-                                    </div>
+                                        <p>전통주와 어울리는 음식</p>
                                         <img src="" alt="이미지" />
                                    </a>
                               </li>
-                              <li>
+                              <li class = "link">
                                    <a href="">
-                                <div>
-                                        <p>찾아가는 양조장</p>
-                                        <p>체험 예약하기</p>
-                                    </div>
+                                        <p>이 달의 전통주</p>
                                         <img src="" alt="이미지" />
                                    </a>
                               </li>
@@ -68,25 +71,25 @@
                                 <li>
                                     <p>양조장</p> 
                                     <div>
-                                        <button class = "mapbtn">구글</button>
-                                        <button class = "mapbtn">네이버</button>
-                                        <button class = "mapbtn">카카오</button>
+                                        <a href=""><div class = "mapbtn"><img src="./img/googlemap.png"/></div></a>
+                                        <a href=""><div class = "mapbtn"><img src = "./img/navermap.png"/></div></a>
+                                        <a href=""><div class = "mapbtn"><img src = "./img/kakaomap.png"/></div></a>
                                     </div>
                                 </li>
                                 <li>
                                     <p>전통주 판매처</p> 
                                     <div>
-                                        <button class = "mapbtn">구글</button>
-                                        <button class = "mapbtn">네이버</button>
-                                        <button class = "mapbtn">카카오</button>
+                                        <a href=""><div class = "mapbtn"><img src="./img/googlemap.png"/></div></a>
+                                        <a href=""><div class = "mapbtn"><img src = "./img/navermap.png"/></div></a>
+                                        <a href=""><div class = "mapbtn"><img src = "./img/kakaomap.png"/></div></a>
                                     </div>
                                 </li>
                                 <li>
                                     <p>전통주점</p> 
                                     <div>
-                                        <button class = "mapbtn">구글</button>
-                                        <button class = "mapbtn">네이버</button>
-                                        <button class = "mapbtn">카카오</button>
+                                        <a href=""><div class = "mapbtn"><img src="./img/googlemap.png"/></div></a>
+                                        <a href=""><div class = "mapbtn"><img src = "./img/navermap.png"/></div></a>
+                                        <a href=""><div class = "mapbtn"><img src = "./img/kakaomap.png"/></div></a>
                                     </div>
                                 </li>
                             </ul>
@@ -94,15 +97,18 @@
                          <div class="cardnews">
                             <p><span>CARD</span>NEWS</p>
                             <ul id = "cardnews_image" class = "slider">
-                                <li><a href = ""><img src="./img/sample (1).jpg"></a></li>
-                                <li><a href = ""><img src="./img/sample (2).jpg"></a></li>
-                                <li><a href = ""><img src="./img/sample (3).jpg"></a></li>
-                                <li><a href = ""><img src="./img/sample (4).jpg"></a></li>
-                                <li><a href = ""><img src="./img/sample (5).jpg"></a></li>
+                                <li><a href = ""><img src="./img/sample.jpeg"></a></li>
+                                <li><a href = ""><img src="./img/sample.jpeg"></a></li>
+                                <li><a href = ""><img src="./img/sample.jpeg"></a></li>
+                                <li><a href = ""><img src="./img/sample.jpeg"></a></li>
+                                <li><a href = ""><img src="./img/sample.jpeg"></a></li>
                             </ul>
                          </div>
                     </section>
           </main>
+          <footer>
+            푸터
+          </footer>
 
           <script src="index.js"></script>
      </body>

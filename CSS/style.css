@@ -35,11 +35,16 @@ body {
 
 /*헤더 부분*/
 header {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100vw;
      height: 8rem;
      display: flex;
      justify-content: space-between;
      align-items: center;
      padding: 0 20px;
+     background-color: #f9f2e4;
      border-bottom: 1px solid rgba(100, 100, 100, 0.2);
      z-index: 999;
 }
@@ -113,6 +118,9 @@ header p a img {
 
 /*메인 부분*/
 /*메인 컨텐츠 부분*/
+main {
+     margin-top: 8rem;
+}
 .title {
      display: flex;
      flex-direction: column;
@@ -147,6 +155,11 @@ header p a img {
      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
      padding: 0 20px;
      margin-bottom: 20px;
+     font-size: 16px;
+}
+.fullpage section .main-page .link a img {
+     width: 60px;
+     height: 60px;
 }
 
 @media screen and (min-width: 800px) {
@@ -320,4 +333,23 @@ footer {
      height: 10rem;
      background-color: #333;
      color: #eee;
+}
+/*top 버튼*/
+#topButton {
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     width: 50px;
+     height: 50px;
+     background-color: rgba(53, 53, 53, 0.4);
+     color: #eee;
+     border: none;
+     border-radius: 50%;
+     font-size: 20px;
+     cursor: pointer;
+     display: none; /* 처음엔 안 보이게 */
+}
+
+#topButton:hover {
+     background-color: #dfafaf;
 }

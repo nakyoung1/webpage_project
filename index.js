@@ -1,10 +1,3 @@
-// $(function () {
-//      $(".menu-btn").on("click", function (e) {
-//           e.preventDefault();
-//           $(".mobile_menu").slideToggle();
-//      });
-// });
-
 $(function () {
      //토글 메뉴 플러그인 실행
      var toggle = $(".toggle");
@@ -42,5 +35,20 @@ $(document).ready(function () {
                     },
                },
           ],
+     });
+
+     $(window).on("scroll", function () {
+          if ($(this).scrollTop() > 50) {
+               $("#topButton").fadeIn(); // 버튼 나타남
+          } else {
+               $("#topButton").fadeOut(); // 버튼 사라짐
+          }
+     });
+     // 버튼 클릭 시 최상단으로 이동
+     $("#topButton").on("click", function () {
+          $("html, body").animate({ scrollTop: 0 }, 300); // 0.5초(500ms) 동안 스크롤 업
+     });
+     $("header p").on("click", function () {
+          $("html, body").animate({ scrollTop: 0 }, 300); // 0.5초(500ms) 동안 스크롤 업
      });
 });

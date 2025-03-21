@@ -41,23 +41,36 @@
           </header>
           <section>
                <h3>전통주 검색하기</h3>
-               <article>
-                    <a href="https://terms.naver.com/list.naver?cid=58636&categoryId=58636">
+               <article class="main">
+                    <a
+                         href="https://terms.naver.com/list.naver?cid=58636&categoryId=58636"
+                         target="_blank"
+                    >
                          <p class="go_to_naver">네이버 전통주 지식백과</p></a
                     >
-                    <p class="total">Total : 1073</p>
+                    <div id="searchIcon">
+                         <p class="total">총 0개</p>
+                         <span id="buttons">
+                              <button type="button" id="sortByNameBtn">가나다 순으로 정렬</button>
+                              <button type="button" id="sortByAlcoholBtn">
+                                   도수순으로 정렬
+                              </button></span
+                         >
+                    </div>
                     <form id="searchForm">
                          <div class="search-box">
-                              <select id="degreeFilter">
-                                   <option value="all">전체</option>
-                                   <option value="under10">10도이하</option>
-                                   <option value="10to20">10~20도</option>
-                                   <option value="20to30">20~30도</option>
-                                   <option value="30to40">30~40도</option>
-                                   <option value="40to50">40~50도</option>
-                                   <option value="over50">50도 초과</option>
-                              </select>
-                              <input type="text" id="searchInput" placeholder="검색" />
+                              <p>
+                                   <select id="degreeFilter">
+                                        <option value="all">전체</option>
+                                        <option value="under10">10도이하</option>
+                                        <option value="10to20">10~20도</option>
+                                        <option value="20to30">20~30도</option>
+                                        <option value="30to40">30~40도</option>
+                                        <option value="40to50">40~50도</option>
+                                        <option value="over50">50도 초과</option>
+                                   </select>
+                                   <input type="text" id="searchInput" placeholder="검색" />
+                              </p>
                               <button class="searchBtn" type="button">검색</button>
                          </div>
                     </form>

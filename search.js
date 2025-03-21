@@ -307,19 +307,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
      searchForm.addEventListener("submit", function (e) {
           e.preventDefault();
-          filterData();
+          fetchDataAndDisplay();
      });
 
      searchInput.addEventListener("keydown", function (e) {
           if (e.key === "Enter") {
                e.preventDefault();
-               filterData();
+               fetchDataAndDisplay();
           }
      });
 
      searchBtn.addEventListener("click", function (e) {
           e.preventDefault();
-          filterData();
+          fetchDataAndDisplay();
      });
 
      degreeFilter.addEventListener("change", fetchDataAndDisplay);

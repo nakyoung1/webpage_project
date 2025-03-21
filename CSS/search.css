@@ -235,7 +235,7 @@ input {
 .search-result {
      display: flex;
      flex-direction: column;
-     width: 90%;
+     width: 100%;
 }
 
 .search-result .item {
@@ -251,7 +251,7 @@ input {
 }
 
 .search-result div h4 {
-     width: 60%;
+     width: 50%;
 }
 .search-result div .item_content {
      display: flex;

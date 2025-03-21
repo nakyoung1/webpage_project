@@ -41,14 +41,30 @@
           </header>
           <section>
                <h3>전통주 검색하기</h3>
-               <div class="search-box">
-                    <input placeholder="전통주를 검색하세요" />
-                    <button>검색</button>
-               </div>
-               <article class="search-result"></article>
+               <article>
+                    <a href="https://terms.naver.com/list.naver?cid=58636&categoryId=58636">
+                         <p class="go_to_naver">네이버 전통주 지식백과</p></a
+                    >
+                    <p class="total">Total : 1073</p>
+                    <form id="searchForm">
+                         <div class="search-box">
+                              <select id="degreeFilter">
+                                   <option value="all">전체</option>
+                                   <option value="under10">10도이하</option>
+                                   <option value="10to20">10~20도</option>
+                                   <option value="20to30">20~30도</option>
+                                   <option value="30to40">30~40도</option>
+                                   <option value="40to50">40~50도</option>
+                                   <option value="over50">50도 초과</option>
+                              </select>
+                              <input type="text" id="searchInput" placeholder="검색" />
+                              <button class="searchBtn" type="button">검색</button>
+                         </div>
+                    </form>
+                    <article class="search-result"></article>
+               </article>
           </section>
           <button id="topButton">▲</button>
-          <script src="index.js"></script>
           <script src="search.js"></script>
      </body>
 </html>

@@ -274,7 +274,7 @@ document.addEventListener("DOMContentLoaded", function () {
                      </div>
                  </div>`;
           });
-          total.innerHTML = `총 ${data.length}개`;
+          total.innerHTML = `Total : ${data.length}`;
      }
 
      sortByNameBtn.addEventListener("click", () => {
@@ -324,3 +324,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
      degreeFilter.addEventListener("change", fetchDataAndDisplay);
 });
+
+//한영변환
+
+// JSON 데이터 불러오기
+fetch("translations.json")
+     .then((response) => response.json())
+     .then((data) => {
+          const savedLang = localStorage.getItem("lang") || "kor"; // 저장된 언어가 있으면 불러오고, 없으면 기본값(KOR)
+          updateText(data[savedLang]);
+
+          // KOR 버튼 클릭 시
+          document.getElementById("kor").addEventListener("click", (event) => {
+               event.preventDefault(); // 새로고침 방지
+               updateText(data.kor);
+               localStorage.setItem("lang", "kor");
+          });
+
+          // ENG 버튼 클릭 시
+          document.getElementById("eng").addEventListener("click", (event) => {
+               event.preventDefault(); // 새로고침 방지
+               updateText(data.eng);
+               localStorage.setItem("lang", "eng");
+          });
+     })
+     .catch((error) => console.error("JSON 파일 로드 중 오류 발생:", error));
+
+// 텍스트 변경 함수
+function updateText(langData) {
+     console.log("현재 선택된 언어 데이터:", langData); // 확인용 로그
+
+     document.getElementById("search2").textContent = langData.search2;
+     document.getElementById("dictionary").textContent = langData.dictionary;
+     document.getElementById("sortByNameBtn").textContent = langData.sortByNameBtn;
+     document.getElementById("sortByAlcoholBtn").textContent = langData.sortByAlcoholBtn;
+     document.getElementById("search3").textContent = langData.search3;
+}

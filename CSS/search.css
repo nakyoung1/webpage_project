@@ -101,6 +101,31 @@ header p a img {
      cursor: pointer;
 }
 
+.utility {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 3px;
+     width: 50px;
+     height: 30px;
+}
+
+.utility a {
+     cursor: pointer;
+     border: 2px solid #c9bea4;
+     padding: 5px;
+     border-radius: 3px;
+}
+
+.utility a:hover {
+     border: 2px solid #c9bea4;
+     background-color: #4f4a3e;
+     color: white;
+     padding: 5px;
+     border-radius: 3px;
+}
+
 @media screen and (min-width: 800px) {
      .toggle,
      .toggle img {
@@ -113,6 +138,16 @@ header p a img {
           font-size: 20px;
           display: flex;
           justify-content: space-between;
+     }
+     .utility {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 3px;
+          width: 50px;
+          height: 30px;
+          margin-right: 20px;
      }
 }
 

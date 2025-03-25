@@ -2,9 +2,13 @@
 <html lang="en">
      <head>
           <meta charset="UTF-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
           <title>한술담다</title>
           <link rel="stylesheet" href="./CSS/style.css" />
+          <link rel="stylesheet" href="./CSS/header.css" />
           <link rel="stylesheet" href="./CSS/search.css" />
 
           <link
@@ -46,12 +50,16 @@
                          href="https://terms.naver.com/list.naver?cid=58636&categoryId=58636"
                          target="_blank"
                     >
-                         <p class="go_to_naver" id="dictionary">네이버 전통주 지식백과</p></a
+                         <p class="go_to_naver" id="dictionary">
+                              네이버 전통주 지식백과
+                         </p></a
                     >
                     <div id="searchIcon">
                          <p class="total" id="total">Total : 0</p>
                          <span id="buttons">
-                              <button type="button" id="sortByNameBtn">가나다 순으로 정렬</button>
+                              <button type="button" id="sortByNameBtn">
+                                   가나다 순으로 정렬
+                              </button>
                               <button type="button" id="sortByAlcoholBtn">
                                    도수순으로 정렬
                               </button></span
@@ -62,16 +70,30 @@
                               <p>
                                    <select id="degreeFilter">
                                         <option value="all">전체</option>
-                                        <option value="under10">10도이하</option>
+                                        <option value="under10">
+                                             10도이하
+                                        </option>
                                         <option value="10to20">10~20도</option>
                                         <option value="20to30">20~30도</option>
                                         <option value="30to40">30~40도</option>
                                         <option value="40to50">40~50도</option>
-                                        <option value="over50">50도 초과</option>
+                                        <option value="over50">
+                                             50도 초과
+                                        </option>
                                    </select>
-                                   <input type="text" id="searchInput" placeholder="검색" />
+                                   <input
+                                        type="text"
+                                        id="searchInput"
+                                        placeholder="검색"
+                                   />
                               </p>
-                              <button class="searchBtn" type="button " id="search3">검색</button>
+                              <button
+                                   class="searchBtn"
+                                   type="button "
+                                   id="search3"
+                              >
+                                   검색
+                              </button>
                          </div>
                     </form>
                     <article class="search-result"></article>

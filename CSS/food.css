@@ -1,0 +1,81 @@
+#food-container {
+     margin-top: 8rem;
+}
+h3 {
+     font-family: "GangwonEduPowerExtraBoldA";
+     padding-top: 60px;
+     padding-left: 5%;
+     font-size: 40px;
+}
+
+#buttons {
+     margin: 10px auto;
+     width: 90%;
+     display: flex;
+     gap: 6%;
+     justify-content: space-between;
+}
+
+#buttons a {
+     min-width: 40px;
+     border: 2px solid #9e0032;
+     color: #6c0022;
+     padding: 5px 8px;
+     border-radius: 5px;
+}
+#buttons a:hover {
+     background-color: #6c0022;
+     color: white;
+}
+
+.food-box {
+     scroll-margin-top: 8.5rem;
+     width: 90%;
+     height: 500px;
+     margin: 0 auto;
+     border: 2px solid red;
+     margin-bottom: 15px;
+     padding: 20px;
+}
+
+.food-box p {
+     font-family: "GangwonEduPowerExtraBoldA";
+     font-size: 30px;
+}
+#meaning {
+     padding: 15px;
+     border: 1px solid green;
+     background-color: white;
+     border-radius: 10px;
+}
+.photos {
+     height: 80%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+}
+.food_photo {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     height: 25%;
+     background-color: pink;
+}
+@media screen and (min-width: 1080px) {
+     #buttons {
+          justify-content: center;
+     }
+     #buttons a {
+          width: 15%;
+          text-align: center;
+     }
+     .food-box {
+          width: 44%;
+     }
+
+     .foods {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+     }
+}

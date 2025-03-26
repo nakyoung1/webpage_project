@@ -12,54 +12,133 @@ h3 {
      margin: 10px auto;
      width: 90%;
      display: flex;
-     gap: 6%;
+     flex-wrap: wrap;
+     gap: 15px;
      justify-content: space-between;
+     margin-bottom: 30px;
 }
 
 #buttons a {
-     min-width: 40px;
+     height: 40px;
+     line-height: 40px;
+     background-color: rgba(255, 255, 255, 0.7);
      border: 2px solid #9e0032;
      color: #6c0022;
-     padding: 5px 8px;
+
      border-radius: 5px;
+     text-align: center;
+}
+#buttons a:nth-child(1),
+#buttons a:nth-child(2),
+#buttons a:nth-child(3) {
+     width: 30%;
+}
+
+#buttons a:nth-child(4),
+#buttons a:nth-child(5) {
+     width: 48%;
 }
 #buttons a:hover {
      background-color: #6c0022;
      color: white;
 }
-
+@media screen and (min-width: 800px) {
+     #buttons {
+          flex-wrap: nowrap;
+     }
+     #buttons a {
+          width: 20%;
+     }
+     #buttons a:nth-child(4),
+     #buttons a:nth-child(5) {
+          width: 30%;
+     }
+}
 .food-box {
      scroll-margin-top: 8.5rem;
      width: 90%;
-     height: 500px;
+     min-height: 600px;
      margin: 0 auto;
-     border: 2px solid red;
-     margin-bottom: 15px;
+     border: 2px solid #9e0032;
+     border-radius: 10px;
+     background-color: rgba(255, 255, 255, 0.5);
+     margin-bottom: 30px;
      padding: 20px;
 }
 
 .food-box p {
      font-family: "GangwonEduPowerExtraBoldA";
-     font-size: 30px;
+     font-size: 40px;
+
+     margin: 15px 0;
+     text-align: center;
 }
-#meaning {
-     padding: 15px;
-     border: 1px solid green;
-     background-color: white;
+.meaning {
+     margin: 0 auto;
+     width: 90%;
+     padding: 10px;
      border-radius: 10px;
+     font-weight: 700;
+     text-align: center;
 }
 .photos {
-     height: 80%;
+     height: 100%;
      display: flex;
      flex-direction: column;
      justify-content: space-around;
+     gap: 30px;
+     margin-top: 15px;
 }
 .food_photo {
      display: flex;
-     justify-content: space-around;
-     align-items: center;
-     height: 25%;
-     background-color: pink;
+     justify-content: space-evenly;
+     background-color: #f9f2e4;
+     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+     padding: 10px;
+}
+
+.food_photo img {
+     width: 150px;
+     filter: drop-shadow(10px 10px 10px rgb(49, 22, 22));
+     transition: transform 0.3s ease-in-out; /* 변환 효과가 부드럽게 적용되도록 설정 */
+}
+
+.food_photo img:hover {
+     transform: scale(1.1) translateY(-10px); /* 이미지 확대 및 위로 10px 이동 */
+     transition: transform 0.3s ease-in-out; /* 이 효과가 끝나면 다시 원래 위치로 */
+}
+
+.food_photo img:hover {
+     animation: hoverEffect 0.6s ease-in-out forwards; /* 애니메이션 적용 */
+}
+
+.food_photo div {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     width: 60%;
+}
+.food_photo div h5 {
+     font-size: 20px;
+     margin-bottom: 5px;
+     font-weight: 600;
+}
+.food_photo div h6 {
+     font-size: 14px;
+     font-weight: 500;
+}
+.food_photo:nth-child(2) {
+     text-align: end;
+}
+
+@keyframes hoverEffect {
+     0%,
+     100% {
+          transform: translateY(0);
+     } /* 시작과 끝에서는 원래 위치 */
+     50% {
+          transform: scale(1.1) translateY(-10px);
+     } /* 중간에 확대 및 이동 */
 }
 @media screen and (min-width: 1080px) {
      #buttons {
@@ -69,13 +148,35 @@ h3 {
           width: 15%;
           text-align: center;
      }
-     .food-box {
-          width: 44%;
+     .photos {
+          flex-direction: row;
+     }
+     .food_photo {
+          width: 33%;
+          height: 400px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
      }
 
-     .foods {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
+     .food_photo img {
+          width: 250px;
+     }
+     .food_photo div {
+          width: 90%;
+     }
+     .food_photo div h5,
+     .food_photo div h6 {
+          text-align: center;
+     }
+     .food_photo div h5 {
+          font-size: 25px;
+          font-weight: 700;
+          margin-bottom: 15px;
+     }
+     .food_photo div h6 {
+          font-size: 15px;
      }
 }

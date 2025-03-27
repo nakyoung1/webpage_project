@@ -182,3 +182,8 @@ h3 {
           font-size: 15px;
      }
 }
+@media screen and(max-width:768px) {
+     .food_photo img {
+          width: 100px;
+     }
+}

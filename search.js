@@ -1,13 +1,3 @@
-$(function () {
-     //토글 메뉴 플러그인 실행
-     var toggle = $(".toggle");
-     var menu = $(".mobile_menu");
-     $(toggle).on("click", function (e) {
-          e.preventDefault(); // 이벤트 기본동작 실행 막기
-          menu.slideToggle();
-     });
-});
-
 $(window).on("scroll", function () {
      if ($(this).scrollTop() > 50) {
           $("#topButton").fadeIn(); // 버튼 나타남
@@ -22,48 +12,6 @@ $("#topButton").on("click", function () {
 $("header p").on("click", function () {
      $("html, body").animate({ scrollTop: 0 }, 300); // 0.5초(500ms) 동안 스크롤 업
 });
-
-//한글,영어 사이트
-fetch("translations.json")
-     .then((response) => response.json())
-     .then((data) => {
-          const savedLang = localStorage.getItem("lang") || "kor"; // 저장된 언어가 있으면 불러오고, 없으면 기본값(KOR)
-          updateText(data[savedLang]);
-
-          // KOR 버튼 클릭 시
-          document.getElementById("kor").addEventListener("click", (event) => {
-               event.preventDefault(); // 새로고침 방지
-               updateText(data.kor);
-               localStorage.setItem("lang", "kor");
-          });
-
-          // ENG 버튼 클릭 시
-          document.getElementById("eng").addEventListener("click", (event) => {
-               event.preventDefault(); // 새로고침 방지
-               updateText(data.eng);
-               localStorage.setItem("lang", "eng");
-          });
-     })
-     .catch((error) => console.error("JSON 파일 로드 중 오류 발생:", error));
-
-function updateText(langData) {
-     console.log("현재 선택된 언어 데이터:", langData); // 확인용 로그
-
-     // 제목 변경
-     document.title = langData.title;
-
-     // 메뉴 변경
-     document.getElementById("menu_search").textContent = langData.menu_search;
-     document.getElementById("menu_location").textContent =
-          langData.menu_location;
-     document.getElementById("menu_news").textContent = langData.menu_news;
-
-     document.getElementById("menu_search2").textContent =
-          langData.menu_search2;
-     document.getElementById("menu_location2").textContent =
-          langData.menu_location2;
-     document.getElementById("menu_news2").textContent = langData.menu_news2;
-}
 
 document.addEventListener("DOMContentLoaded", function () {
      const searchForm = document.getElementById("searchForm");

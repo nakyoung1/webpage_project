@@ -33,12 +33,12 @@ h3 {
 #buttons a:nth-child(1),
 #buttons a:nth-child(2),
 #buttons a:nth-child(3) {
-     width: 30%;
+     min-width: 30%;
 }
 
 #buttons a:nth-child(4),
 #buttons a:nth-child(5) {
-     width: 45%;
+     min-width: 46%;
 }
 #buttons a:hover {
      background-color: #6c0022;
@@ -100,7 +100,9 @@ h3 {
 }
 
 .food_photo img {
-     width: 150px;
+     width: 30%;
+     height: auto; /* 지정된 영역을 채우도록 설정 */
+     object-fit: contain; /* 이미지가 비율을 유지하면서 영역에 맞게 조절됨 */
      filter: drop-shadow(10px 10px 10px rgb(49, 22, 22));
      transition: transform 0.3s ease-in-out; /* 변환 효과가 부드럽게 적용되도록 설정 */
 }

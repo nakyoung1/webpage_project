@@ -40,9 +40,6 @@ fetch("translations.json")
 function updateText(langData) {
      console.log("📢 언어 변경:", langData); // 변경되는 값 확인용
 
-     // 제목 변경
-     document.title = langData.title;
-
      Object.keys(langData).forEach((id) => {
           const element = document.getElementById(id);
           if (element) {

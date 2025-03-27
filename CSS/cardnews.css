@@ -1,0 +1,61 @@
+#cardnews-container {
+     margin-top: 8rem;
+}
+h3 {
+     font-family: "GangwonEduPowerExtraBoldA";
+     padding-top: 60px;
+     padding-left: 5%;
+     margin-bottom: 50px;
+     font-size: 40px;
+}
+
+.cardnews-img-box {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 30px;
+}
+.cardnews-img-box img {
+     width: 80vw;
+     cursor: pointer;
+}
+.cardnews section {
+     display: none;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 50px;
+}
+
+.back-button {
+     cursor: pointer;
+     width: 30%;
+     height: 40px;
+     line-height: 40px;
+     background-color: rgba(255, 255, 255, 0.7);
+     border: 2px solid #9e0032;
+     color: #6c0022;
+     border-radius: 5px;
+     text-align: center;
+     font-size: 18px;
+     font-weight: 600;
+}
+
+.cardnews section img {
+     display: flex;
+     width: 80vw;
+}
+@media screen and (min-width: 800px) {
+     .cardnews-img-box {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          gap: 30px;
+     }
+     .cardnews-img-box img {
+          width: 33%;
+     }
+}

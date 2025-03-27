@@ -46,7 +46,6 @@ fetch("translations.json")
      })
      .catch((error) => console.error("JSON 파일 로드 중 오류 발생:", error));
 
-// 텍스트 변경 함수
 function updateText(langData) {
      console.log("현재 선택된 언어 데이터:", langData); // 확인용 로그
 
@@ -55,11 +54,14 @@ function updateText(langData) {
 
      // 메뉴 변경
      document.getElementById("menu_search").textContent = langData.menu_search;
-     document.getElementById("menu_location").textContent = langData.menu_location;
+     document.getElementById("menu_location").textContent =
+          langData.menu_location;
      document.getElementById("menu_news").textContent = langData.menu_news;
 
-     document.getElementById("menu_search2").textContent = langData.menu_search2;
-     document.getElementById("menu_location2").textContent = langData.menu_location2;
+     document.getElementById("menu_search2").textContent =
+          langData.menu_search2;
+     document.getElementById("menu_location2").textContent =
+          langData.menu_location2;
      document.getElementById("menu_news2").textContent = langData.menu_news2;
 }
 
@@ -102,30 +104,42 @@ document.addEventListener("DOMContentLoaded", function () {
                case "all":
                     break;
                case "under10":
-                    filteredData = filteredData.filter((item) => parseFloat(item.도수) <= 10);
+                    filteredData = filteredData.filter(
+                         (item) => parseFloat(item.도수) <= 10
+                    );
                     break;
                case "10to20":
                     filteredData = filteredData.filter(
-                         (item) => parseFloat(item.도수) > 10 && parseFloat(item.도수) <= 20
+                         (item) =>
+                              parseFloat(item.도수) > 10 &&
+                              parseFloat(item.도수) <= 20
                     );
                     break;
                case "20to30":
                     filteredData = filteredData.filter(
-                         (item) => parseFloat(item.도수) > 20 && parseFloat(item.도수) <= 30
+                         (item) =>
+                              parseFloat(item.도수) > 20 &&
+                              parseFloat(item.도수) <= 30
                     );
                     break;
                case "30to40":
                     filteredData = filteredData.filter(
-                         (item) => parseFloat(item.도수) > 30 && parseFloat(item.도수) <= 40
+                         (item) =>
+                              parseFloat(item.도수) > 30 &&
+                              parseFloat(item.도수) <= 40
                     );
                     break;
                case "40to50":
                     filteredData = filteredData.filter(
-                         (item) => parseFloat(item.도수) > 40 && parseFloat(item.도수) <= 50
+                         (item) =>
+                              parseFloat(item.도수) > 40 &&
+                              parseFloat(item.도수) <= 50
                     );
                     break;
                case "over50":
-                    filteredData = filteredData.filter((item) => parseFloat(item.도수) > 50);
+                    filteredData = filteredData.filter(
+                         (item) => parseFloat(item.도수) > 50
+                    );
                     break;
           }
 
@@ -157,23 +171,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
      sortByAlcoholBtn.addEventListener("click", () => {
           isAlcoholAscending = !isAlcoholAscending;
-          const sortedData = sortByAlcoholContent(filteredData, isAlcoholAscending);
+          const sortedData = sortByAlcoholContent(
+               filteredData,
+               isAlcoholAscending
+          );
           updateDisplay(sortedData);
      });
 
      function sortByName(data, ascending) {
           if (ascending) {
-               return [...data].sort((a, b) => b.전통주명.localeCompare(a.전통주명));
+               return [...data].sort((a, b) =>
+                    b.전통주명.localeCompare(a.전통주명)
+               );
           } else {
-               return [...data].sort((a, b) => a.전통주명.localeCompare(b.전통주명));
+               return [...data].sort((a, b) =>
+                    a.전통주명.localeCompare(b.전통주명)
+               );
           }
      }
 
      function sortByAlcoholContent(data, ascending) {
           if (ascending) {
-               return [...data].sort((a, b) => parseFloat(b.도수) - parseFloat(a.도수));
+               return [...data].sort(
+                    (a, b) => parseFloat(b.도수) - parseFloat(a.도수)
+               );
           } else {
-               return [...data].sort((a, b) => parseFloat(a.도수) - parseFloat(b.도수));
+               return [...data].sort(
+                    (a, b) => parseFloat(a.도수) - parseFloat(b.도수)
+               );
           }
      }
 
@@ -196,39 +221,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
      degreeFilter.addEventListener("change", fetchDataAndDisplay);
 });
-
-//한영변환
-
-// JSON 데이터 불러오기
-fetch("translations.json")
-     .then((response) => response.json())
-     .then((data) => {
-          const savedLang = localStorage.getItem("lang") || "kor"; // 저장된 언어가 있으면 불러오고, 없으면 기본값(KOR)
-          updateText(data[savedLang]);
-
-          // KOR 버튼 클릭 시
-          document.getElementById("kor").addEventListener("click", (event) => {
-               event.preventDefault(); // 새로고침 방지
-               updateText(data.kor);
-               localStorage.setItem("lang", "kor");
-          });
-
-          // ENG 버튼 클릭 시
-          document.getElementById("eng").addEventListener("click", (event) => {
-               event.preventDefault(); // 새로고침 방지
-               updateText(data.eng);
-               localStorage.setItem("lang", "eng");
-          });
-     })
-     .catch((error) => console.error("JSON 파일 로드 중 오류 발생:", error));
-
-// 텍스트 변경 함수
-function updateText(langData) {
-     console.log("현재 선택된 언어 데이터:", langData); // 확인용 로그
-
-     document.getElementById("search2").textContent = langData.search2;
-     document.getElementById("dictionary").textContent = langData.dictionary;
-     document.getElementById("sortByNameBtn").textContent = langData.sortByNameBtn;
-     document.getElementById("sortByAlcoholBtn").textContent = langData.sortByAlcoholBtn;
-     document.getElementById("search3").textContent = langData.search3;
-}

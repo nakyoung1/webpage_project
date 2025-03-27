@@ -1,0 +1,78 @@
+#month-container {
+     margin-top: 8rem;
+}
+h3 {
+     font-family: "GangwonEduPowerExtraBoldA";
+     padding-top: 60px;
+     padding-left: 5%;
+     margin-bottom: 50px;
+     font-size: 40px;
+}
+.month-box p {
+     font-family: "GangwonEduPowerExtraBoldA";
+     font-size: 40px;
+     margin-top: 20px;
+}
+
+.month-box {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 50px;
+     scroll-margin-top: 8.5rem;
+     width: 90%;
+     min-height: 600px;
+     margin: 0 auto;
+     border: 2px solid #9e0032;
+     border-radius: 10px;
+     background-color: rgba(255, 255, 255, 0.5);
+     margin-bottom: 30px;
+     padding: 30px;
+     text-align: center;
+}
+
+.month-box img {
+     width: 300px;
+     margin-bottom: 50px;
+     filter: drop-shadow(0px 5px 5px rgb(49, 22, 22));
+}
+
+.month-box h5 {
+     font-size: 20px;
+}
+.month-box h6 {
+     font-size: 15px;
+     line-height: 1.5;
+     font-weight: 400;
+}
+@media screen and (min-width: 1080px) {
+     .month-box {
+          display: flex;
+          width: 90%;
+     }
+     .month-box article {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 50px;
+          width: 100%;
+     }
+     .month-box img {
+          margin: 0;
+     }
+     .month-box article aside {
+          display: flex;
+          flex-direction: column;
+
+          width: 50%;
+     }
+     .month-box h5 {
+          font-size: 20px;
+     }
+     .month-box h6 {
+          font-size: 18px;
+          line-height: 1.5;
+          font-weight: 400;
+     }
+}

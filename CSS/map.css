@@ -1,0 +1,39 @@
+#map-container {
+     margin-top: 8rem;
+}
+h3 {
+     font-family: "GangwonEduPowerExtraBoldA";
+     padding-top: 60px;
+     padding-left: 5%;
+     margin-bottom: 30px;
+     font-size: 40px;
+}
+
+section {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+
+#map_download {
+     height: 50px;
+     line-height: 50px;
+     background-color: rgba(255, 255, 255, 0.7);
+     border: 2px solid #9e0032;
+     color: #6c0022;
+     border-radius: 5px;
+     text-align: center;
+     font-size: 18px;
+     font-weight: 600;
+     width: 30%;
+     margin-bottom: 40px;
+}
+#map_download:hover {
+     background-color: #9e0032;
+     color: white;
+}
+
+#korea_map {
+     width: 90vw;
+}

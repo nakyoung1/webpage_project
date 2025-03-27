@@ -10,22 +10,21 @@ $(function () {
 
 $(document).ready(function () {
      $(".slider").slick({
-          slidesToShow: 3, // 기본적으로 4장 표시
+          slidesToShow: 3, // 기본적으로 3장 표시
           slidesToScroll: 1, // 한 번에 1장씩 이동
-          dots: true,
+          dots: false,
           autoplay: true,
           autoplaySpeed: 1000,
           speed: 1000,
           infinite: true,
-          centerMode: true,
-          prevArrow: false /* 이전 버튼 비활성화 */,
+          prevArrow: false,
           nextArrow: false,
           variableWidth: false, // 동일한 크기로 정렬
           responsive: [
                {
                     breakpoint: 1200, // 태블릿 이하
                     settings: {
-                         slidesToShow: 3, // 3장 표시
+                         slidesToShow: 3,
                     },
                },
                {

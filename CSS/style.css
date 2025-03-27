@@ -25,6 +25,12 @@
 main {
      margin-top: 8rem;
 }
+
+.page-container {
+     display: flex;
+     flex-direction: column;
+     min-height: 100vh; /* 뷰포트 높이를 기준으로 최소 높이 설정 */
+}
 .title {
      display: flex;
      flex-direction: column;
@@ -183,43 +189,7 @@ img {
 /*카드뉴스*/
 .slider {
      overflow: hidden;
-}
-.slick-dots {
-     position: absolute;
-     bottom: -30px; /* 점을 슬라이드 아래에 위치 */
-     left: 50%;
-     transform: translateX(-50%); /* 가로로 중앙 정렬 */
-     padding: 0;
-     margin: 0;
-     list-style-type: none;
-}
-
-.slick-dots li {
-     display: inline-block; /* 점을 가로로 정렬 */
-     margin: 0 10px; /* 점 사이의 간격 */
-}
-
-.slick-dots li button {
-     background-color: #000000;
-     border: 2px solid #ccc;
-     border-radius: 50%; /* 동그라미 모양 */
-     width: 12px;
-     height: 12px;
-     padding: 0;
-     cursor: pointer;
-     outline: none;
-     transition: background-color 0.3s;
-}
-
-/* 버튼에 호버 시 색상 변경 */
-.slick-dots li button:hover {
-     background-color: #ff4c4c;
-}
-
-/* 선택된 버튼 스타일 */
-.slick-dots li.slick-active button {
-     background-color: #333;
-     border-color: #333;
+     padding: 0 20px;
 }
 
 .cardnews {
@@ -248,11 +218,35 @@ img {
 /*푸터  부분*/
 footer {
      display: flex;
+     flex-direction: column;
      justify-content: center;
-     align-items: center;
-     height: 10rem;
-     background-color: #333;
+     align-items: start;
+     gap: 10px;
+     background-color: #222;
      color: #eee;
+     padding: 30px;
+}
+footer img {
+     width: 80px;
+}
+footer h6 {
+     font-size: 14px;
+     font-weight: 300;
+     color: #777;
+}
+footer h4 {
+     margin-top: 10px;
+}
+@media screen and (min-width: 800px) {
+     footer {
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+     }
+     footer h4 {
+          margin: 0;
+          font-size: 18px;
+     }
 }
 /*top 버튼*/
 #topButton {

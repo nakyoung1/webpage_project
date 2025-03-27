@@ -56,6 +56,10 @@ h3 {
           gap: 30px;
      }
      .cardnews-img-box img {
-          width: 33%;
+          width: 45%;
+     }
+     .cardnews section img {
+          display: flex;
+          width: 50vw;
      }
 }

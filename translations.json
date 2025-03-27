@@ -86,7 +86,13 @@
           "month_title3": "호산춘의 일화",
           "month_content3": "호산춘의 뒤에는 조선시대부터 근대사까지 재밌는 일화가 있습니다. 조선시대에는 상주 목사가 종갓집에 들러 대접을 융숭하게 받고 돌아가던 길에, 호산춘이 생각나 돌아와 호산춘이 든 술독을 다 비웠다. 그 후 종택 사랑채에서 잠이 들었다가 잠결에 요강에 든 것이 호산춘인 줄 알고 마셔버렸다는 이야기, 근대사는 밀주 단속반이 있던 시절, 단속반까지도 호산춘의 맛에 취해 임무를 잊고 돌아가 망주라고 불렸다는 이야기. 1989년 미국 레이건 대통령 방한 때, 만찬주로 사용하겠으니 술을 보내란 말에 '우리는 술을파는 사람이 아니니 필요하면 가져가시오'라 대답하여 청와대 비서실에서 사람들이 호산춘을 가져갔다는 일화가 있습니다. 이처럼 재미있는 일화를 통해 호산춘은 예부터 맛과 향을 인정받았던 술이라는 것을 알 수 있습니다.",
           "map_title": "전체 지도",
-          "map_download": "지도 다운로드 받기"
+          "map_download": "지도 다운로드 받기",
+          "cardnews_title": "카드 뉴스",
+          "back_button1": "뒤로 가기",
+          "back_button2": "뒤로 가기",
+          "back_button3": "뒤로 가기",
+          "back_button4": "뒤로 가기",
+          "back_button5": "뒤로 가기"
      },
      "eng": {
           "title": "HanSulDamDa",
@@ -175,6 +181,12 @@
           "month_title3": "Anecdotes of Hosanchun",
           "month_content3": "Behind Hosanchun lie entertaining stories spanning from the Joseon dynasty to modern times. In the Joseon era, a story tells of a district magistrate who, after being generously hosted by the Jangsu Hwang family, returned craving more Hosanchun, emptied the liquor jar, and later drunkenly mistook something in a chamber pot for Hosanchun and drank it. In modern history, during the prohibition era, even the prohibition officers were said to have forgotten their duties, intoxicated by the taste of Hosanchun, leading to its nickname 'Mangju' (forgotten liquor). In 1989, when President Reagan visited Korea, the presidential office requested Hosanchun for a state banquet. The family famously responded, 'We do not sell liquor; if you need it, take it yourself,' leading to officials from the presidential office collecting the liquor themselves. These amusing anecdotes illustrate that Hosanchun has long been recognized for its exceptional taste and aroma.",
           "map_title": "Map",
-          "map_download": "Download Map"
+          "map_download": "Download Map",
+          "cardnews_title": "CardNews",
+          "back_button1": "Back",
+          "back_button2": "Back",
+          "back_button3": "Back",
+          "back_button4": "Back",
+          "back_button5": "Back"
      }
 }

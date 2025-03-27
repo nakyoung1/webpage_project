@@ -73,6 +73,9 @@ header p a img {
 .pc_menu {
      display: none;
 }
+.pc_menu a:hover {
+     border-bottom: 2px solid #333;
+}
 
 .mobile_menu {
      display: none; /* 기본적으로 숨김 */

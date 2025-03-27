@@ -33,12 +33,12 @@ h3 {
 #buttons a:nth-child(1),
 #buttons a:nth-child(2),
 #buttons a:nth-child(3) {
-     min-width: 30%;
+     width: 30%;
 }
 
 #buttons a:nth-child(4),
 #buttons a:nth-child(5) {
-     min-width: 46%;
+     width: 46%;
 }
 #buttons a:hover {
      background-color: #6c0022;
@@ -48,9 +48,12 @@ h3 {
      #buttons {
           flex-wrap: nowrap;
      }
-     #buttons a {
-          width: 20%;
+     #buttons a:nth-child(1),
+     #buttons a:nth-child(2),
+     #buttons a:nth-child(3) {
+          width: 30%;
      }
+
      #buttons a:nth-child(4),
      #buttons a:nth-child(5) {
           width: 30%;

@@ -1,20 +1,5 @@
-$(window).on("scroll", function () {
-     if ($(this).scrollTop() > 50) {
-          $("#topButton").fadeIn(); // 버튼 나타남
-     } else {
-          $("#topButton").fadeOut(); // 버튼 사라짐
-     }
-});
-// 버튼 클릭 시 최상단으로 이동
-$("#topButton").on("click", function () {
-     $("html, body").animate({ scrollTop: 0 }, 300); // 0.5초(500ms) 동안 스크롤 업
-});
-$("header p").on("click", function () {
-     $("html, body").animate({ scrollTop: 0 }, 300); // 0.5초(500ms) 동안 스크롤 업
-});
-
+// API 를 가져와서 전통주 검색하는 기능 구현
 document.addEventListener("DOMContentLoaded", function () {
-     const searchForm = document.getElementById("searchForm");
      const searchBtn = document.querySelector(".searchBtn");
      const searchInput = document.getElementById("searchInput");
      const searchResult = document.querySelector(".search-result");
@@ -28,22 +13,25 @@ document.addEventListener("DOMContentLoaded", function () {
      let isAlcoholAscending = true; // 도수 정렬 상태
 
      function fetchDataAndDisplay() {
+          // 공공데이터 가져오기
           fetch(
                "https://api.odcloud.kr/api/15048755/v1/uddi:1037e3c8-3964-47e4-afba-b4f0dd3eeef6?page=1&perPage=1200&serviceKey=8X10qoVSgE2ytUQ%2BdWPy%2FEGus5FctvcgR9fFamJrYvXalk%2BhWRubrHyFjHyBylM83T9oNcQ7CLyiaTPsJ6IygA%3D%3D"
           )
                .then((response) => response.json())
                .then((data) => {
+                    //data.data가 없으면 빈 배열로 초기화
                     currentData = data.data || [];
                     displayData(currentData);
                });
      }
-
+     // 전통주명으로 검색하기
      function searchLiquor(data, searchText) {
           return data.filter((item) =>
                item.전통주명.toLowerCase().includes(searchText.toLowerCase())
           );
      }
 
+     // 도수별로 보여주는 함수
      function displayData(data) {
           let searchText = searchInput.value.trim();
           filteredData = searchLiquor(currentData, searchText);
@@ -94,8 +82,9 @@ document.addEventListener("DOMContentLoaded", function () {
           updateDisplay(filteredData);
      }
 
+     // 검색된 결과 보여주는 함수
      function updateDisplay(data) {
-          searchResult.innerHTML = ""; // Clear previous results
+          searchResult.innerHTML = ""; //
           data.forEach((item) => {
                searchResult.innerHTML += `
                  <div class="item">
@@ -108,15 +97,16 @@ document.addEventListener("DOMContentLoaded", function () {
                      </div>
                  </div>`;
           });
+          // 총 검색된 개수는 데이터의 길이
           total.innerHTML = `Total : ${data.length}`;
      }
-
+     //이름순으로 정렬 오름차순,내림차순
      sortByNameBtn.addEventListener("click", () => {
           isNameAscending = !isNameAscending;
           const sortedData = sortByName(filteredData, isNameAscending);
           updateDisplay(sortedData);
      });
-
+     //도수순으로 정렬 오름차순,내림차순
      sortByAlcoholBtn.addEventListener("click", () => {
           isAlcoholAscending = !isAlcoholAscending;
           const sortedData = sortByAlcoholContent(
@@ -125,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
           );
           updateDisplay(sortedData);
      });
-
+     //이름순으로 정렬
      function sortByName(data, ascending) {
           if (ascending) {
                return [...data].sort((a, b) =>
@@ -137,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
                );
           }
      }
-
+     //도수순으로 정렬
      function sortByAlcoholContent(data, ascending) {
           if (ascending) {
                return [...data].sort(
@@ -150,18 +140,14 @@ document.addEventListener("DOMContentLoaded", function () {
           }
      }
 
-     searchForm.addEventListener("submit", function (e) {
-          e.preventDefault();
-          fetchDataAndDisplay();
-     });
-
+     // 엔터키로 검색
      searchInput.addEventListener("keydown", function (e) {
           if (e.key === "Enter") {
                e.preventDefault();
                fetchDataAndDisplay();
           }
      });
-
+     //검색 버튼 눌러서 검색
      searchBtn.addEventListener("click", function (e) {
           e.preventDefault();
           fetchDataAndDisplay();

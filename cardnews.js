@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
      var thumbnails = document.querySelectorAll(".cardnews-img-box img");
      thumbnails.forEach(function (thumbnail, index) {
           thumbnail.addEventListener("click", function () {
+               //썸네일을 클릭했을때 스크롤 상단으로 올림
                window.scrollTo(0, 0);
 
                // 이미지 박스 숨김
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
      });
 });
 
+//메인페이지에서 cardnews 썸네일 눌렀을 때 section을 보여주는 함수
 document.addEventListener("DOMContentLoaded", function () {
      var imgBox = document.querySelector(".cardnews-img-box");
      var sections = document.querySelectorAll(".cardnews section");

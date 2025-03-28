@@ -1,3 +1,4 @@
+// 햄버거 메뉴 토글 함수
 $(function () {
      //토글 메뉴 플러그인 실행
      var toggle = $(".toggle");
@@ -8,6 +9,7 @@ $(function () {
      });
 });
 
+// 카드뉴스 슬라이더 함수
 $(document).ready(function () {
      $(".slider").slick({
           slidesToShow: 3, // 기본적으로 3장 표시
@@ -22,13 +24,13 @@ $(document).ready(function () {
           variableWidth: false, // 동일한 크기로 정렬
           responsive: [
                {
-                    breakpoint: 1200, // 태블릿 이하
+                    breakpoint: 1080, // 태블릿 이하
                     settings: {
                          slidesToShow: 3,
                     },
                },
                {
-                    breakpoint: 768, // 모바일 (가로 모드)
+                    breakpoint: 800, // 모바일 (가로 모드)
                     settings: {
                          slidesToShow: 2, // 2장 표시
                     },
@@ -36,6 +38,7 @@ $(document).ready(function () {
           ],
      });
 
+     // 스크롤을 50이상 내리면 탑버튼 나타남
      $(window).on("scroll", function () {
           if ($(this).scrollTop() > 50) {
                $("#topButton").fadeIn(); // 버튼 나타남
@@ -43,7 +46,7 @@ $(document).ready(function () {
                $("#topButton").fadeOut(); // 버튼 사라짐
           }
      });
-     // 버튼 클릭 시 최상단으로 이동
+     // 탑버튼 클릭 시 최상단으로 이동
      $("#topButton").on("click", function () {
           $("html, body").animate({ scrollTop: 0 }, 300); // 0.5초(500ms) 동안 스크롤 업
      });
@@ -53,6 +56,7 @@ $(document).ready(function () {
 });
 
 // JSON 데이터 불러오기
+// 한/영 사이트 변환
 fetch("translations.json")
      .then((response) => response.json())
      .then((data) => {
@@ -72,8 +76,7 @@ fetch("translations.json")
                updateText(data.eng);
                localStorage.setItem("lang", "eng");
           });
-     })
-     .catch((error) => console.error("JSON 파일 로드 중 오류 발생:", error));
+     });
 
 // 텍스트 변경 함수
 function updateText(langData) {

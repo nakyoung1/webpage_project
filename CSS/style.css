@@ -213,6 +213,12 @@ img {
      width: 100%;
      object-fit: cover;
 }
+@media screen and (min-width: 1080px) {
+     #cardnews_image li img {
+          width: 70%;
+          margin: 0 auto;
+     }
+}
 
 /*푸터  부분*/
 footer {

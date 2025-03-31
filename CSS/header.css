@@ -137,6 +137,9 @@ header p a img {
      .toggle img {
           display: none;
      }
+     .mobile_menu li {
+          display: none;
+     }
      .pc_menu {
           width: 50%;
           font-family: "Pretendard-Regular";

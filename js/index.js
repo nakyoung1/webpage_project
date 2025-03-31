@@ -123,3 +123,9 @@ function updateText(langData) {
      document.querySelector(".map .link li:nth-child(3) p").textContent =
           langData.tavern;
 }
+window.addEventListener("resize", function () {
+     const mobileMenu = document.querySelector(".mobile_menu");
+     if (window.innerWidth >= 800) {
+          mobileMenu.style.display = "none";
+     }
+});

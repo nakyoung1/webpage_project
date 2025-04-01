@@ -158,6 +158,10 @@ h3 {
      .photos {
           flex-direction: row;
      }
+     .meaning {
+          width: 95%;
+          font-size: 20px;
+     }
      .food_photo {
           width: 33%;
           height: 400px;
@@ -184,7 +188,7 @@ h3 {
           margin-bottom: 15px;
      }
      .food_photo div h6 {
-          font-size: 15px;
+          font-size: 16px;
      }
 }
 @media screen and(max-width:768px) {

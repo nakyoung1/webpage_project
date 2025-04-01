@@ -90,6 +90,9 @@ main {
      .fullpage section .main-page .link {
           width: 50%;
      }
+     .fullpage section .main-page .link a {
+          font-size: 18px;
+     }
 }
 
 /*위치 안내 부분*/
@@ -163,6 +166,11 @@ img {
      top: 50%; /* 수직 중앙 정렬 */
      left: 50%; /* 수평 중앙 정렬 */
      transform: translate(-50%, -50%); /* 이미지가 정확히 중앙에 오도록 조정 */
+}
+@media screen and (min-width: 800px) {
+     .map .link li p {
+          font-size: 18px;
+     }
 }
 
 @media screen and (min-width: 1080px) {

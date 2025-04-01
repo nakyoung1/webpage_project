@@ -144,11 +144,21 @@ input {
      gap: 3px;
      width: 50%;
 }
+
 @media screen and (min-width: 1080px) {
+     button {
+          font-size: 16px;
+     }
+     .go_to_naver {
+          font-size: 18px;
+          padding: 10px 0;
+          border-radius: 50px;
+     }
      .search-result {
           flex-direction: row;
           flex-wrap: wrap;
           justify-content: space-between;
+          font-size: 1.2rem;
           gap: 5px;
      }
      .search-result .item {

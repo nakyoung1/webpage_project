@@ -31,6 +31,13 @@ a {
 body {
      font-family: "Pretendard-Regular";
      background-color: #f9f2e4;
+     background-image: url("../img/back_web_15.png");
+     background-size: 1000px;
+}
+@media screen and (min-width: 1080px) {
+     body {
+          background-size: 1500px;
+     }
 }
 
 /*헤더 부분*/
@@ -44,7 +51,7 @@ header {
      justify-content: space-between;
      align-items: center;
      padding: 0 8%;
-     background-color: #f9f2e4;
+     background-color: rgb(249, 242, 228);
      border-bottom: 1px solid rgba(100, 100, 100, 0.2);
      z-index: 999;
 }
